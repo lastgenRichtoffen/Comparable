@@ -28,9 +28,13 @@ public person(String name){
 	}
 
 	@Override
-	public int compareTo(person arg0) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(person p) {
+		
+		if((this.lastname).compareTo(p.lastname)==0){
+			return((this.firstname).compareTo(p.firstname));
+		}
+		else{
+			return(this.lastname).compareTo(p.lastname);
+		}
 	}
-	
 }
