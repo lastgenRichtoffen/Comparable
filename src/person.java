@@ -14,18 +14,17 @@ public class person implements Comparable<person>{
 	
 public person(String name){
 		
-		
-		String[] fullname = new String [3];
-		fullname = name.split(" ");
+	int index = name.indexOf(' ');					//två olika alternativ
+	this.firstname = name.substring(0, index);
+	this.lastname = name.substring(index+1);
 
-		firstname=fullname[fullname.length-1];
-		
-		for(int i =0; i<fullname.length-1; i++){
-			
-			lastname += fullname[i];
-		}
-
-	}
+	
+	this.firstname = name.split(" ")[0];			//gör fullname till en array och delar den vid mellanslag, gör de till index 0 respektive 1
+	this.lastname = name.split(" ")[1];
+}
+public String getname(){
+	return this.firstname + " " + lastname;
+}
 
 	@Override
 	public int compareTo(person p) {

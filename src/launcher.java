@@ -13,6 +13,8 @@ public class launcher {
 		while(sc.hasNextLine()){
 			person p = new person(sc.nextLine().trim());
 			list.add(p);
+			
+			System.out.println(list);
 		}
 	}
 	
